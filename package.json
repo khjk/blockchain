@@ -1,0 +1,13 @@
+{
+  "name": "blockchain",
+  "version": "1.0.0",
+  "description": "Learning Typescript by making a Blockchian",
+  "main": "index.js",
+  "repository": "https://github.com/khjk/blockchain.git",
+  "author": "khjk <begywjd@naver.com>",
+  "license": "MIT",
+  "scripts": {
+    "start":"node index.js",
+    "prestart": "tsc"
+  }
+}
