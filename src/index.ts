@@ -1,22 +1,21 @@
-class Human2 {
-    public name: string;
-    public age : number;
-    public gender: string;
-    constructor(name:string, age:number, gender:string){
-        this.name = name;
-        this.age = age;
-        this.gender = gender;
+class Block {
+    public index: number;
+    public hash: string;
+    public previousHash: string;
+    public data: string;
+    public timestamp: number;
+    constructor(index:number, hash:string, previousHash:string, data:string, timestamp:number){
+        this.index = index;
+        this.hash = hash;
+        this.previousHash = previousHash;
+        this.data = data;
+        this.timestamp = timestamp;
     }
 }
 
-const hyojung = new Human2("hyojung",25,"female");
+const genesisBlock:Block = new Block(0,"23423423423423","","firstblockdata",12345);
 
-const sayHi = (person : Human2): string => {
-    return `Hello ${person.name}, your age is ${person.age} and your gender is ${person.gender}`;
-};
+let blockchain: [Block] = [genesisBlock]; //arayofBlocks
 
-//인터페이스를 사용하면 ts측면에서 안전한데(컴파일된 javascript는 인터페이스를 갖지않음) class로 써야 react에서 사용가능
-//console.log(sayHi(person));
-console.log(sayHi(hyojung));
-
+console.log(blockchain);
 export {};
